@@ -1,9 +1,8 @@
-
-import React, { Component, Fragment } from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
-import { Link } from 'react-router-dom';
-import classNames from 'classnames';
+import React, { Component, Fragment } from "react";
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 const LAUNCH_QUERY = gql`
   query LaunchQuery($flight_number: Int!) {
@@ -55,14 +54,14 @@ export class Launch extends Component {
                     Launch Year: {launch_year}
                   </li>
                   <li className="list-group-item">
-                    Launch Successful:{' '}
+                    Launch Successful:{" "}
                     <span
                       className={classNames({
-                        'text-success': launch_success,
-                        'text-danger': !launch_success
+                        "text-success": launch_success,
+                        "text-danger": !launch_success
                       })}
                     >
-                      {launch_success ? 'Yes' : 'No'}
+                      {launch_success ? "Yes" : "No"}
                     </span>
                   </li>
                 </ul>

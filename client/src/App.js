@@ -3,6 +3,7 @@ import ApolloClient from "apollo-boost";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Launches from "./components/Launches";
 import Launch from "./components/Launch";
+import Heading from "./components/Heading.js";
 import { ApolloProvider } from "react-apollo";
 import "./App.css";
 
@@ -16,8 +17,8 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <Router>
-          <div className="App container">
-            <h1>SpaceX</h1>
+          <div className="App">
+            <Heading />
             <Route exact path="/" component={Launches} />
             <Route exact path="/launch/:flight_number" component={Launch} />
           </div>
