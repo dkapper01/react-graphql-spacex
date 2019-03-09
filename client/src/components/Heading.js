@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BFR from "../bfr.jpg";
 import "../App.css";
 
 export default class Heading extends Component {
